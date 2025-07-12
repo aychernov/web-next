@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone"
+  output: "standalone",
+  async rewrites() {
+    return [
+      {
+        source: '/stats',
+        destination: 'http://api.aychernov.ru/stats', // Проксирование на другой сервер
+      },
+    ];
+  },
 };
 
 export default nextConfig;

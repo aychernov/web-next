@@ -17,13 +17,13 @@ export default function AutoPage() {
           countryCode: data.country_code.toLowerCase(),
         };
 
-        await fetch(`http://api.aychernov.ru/stats`, {
+        await fetch(`/stats`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(dto),
         });
 
-        const statsRes = await fetch("http://api.aychernov.ru/stats");
+        const statsRes = await fetch("/stats");
         const statsData = await statsRes.json();
         setStats(statsData);
       } catch (e) {
