@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/stats',
-        destination: 'http://api.aychernov.ru/stats', // Проксирование на другой сервер
+        destination: 'https://api.aychernov.ru/stats', // Проксирование на другой сервер
       },
     ];
   },
