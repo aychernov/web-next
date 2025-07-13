@@ -7,6 +7,8 @@ export default function AutoPage() {
   const [stats, setStats] = useState({});
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const envVar = process.env.VARIABLE;
+  console.log(`Database URL: ${envVar}`);
 
   useEffect(() => {
     async function fetchAndPost() {
