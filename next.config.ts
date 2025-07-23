@@ -10,9 +10,9 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  experimental: {
-    useLightningcss: true,
-  },
+  // experimental: {
+  //   useLightningcss: true,
+  // },
 };
 
 export default nextConfig;
